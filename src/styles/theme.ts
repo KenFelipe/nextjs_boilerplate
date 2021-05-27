@@ -7,4 +7,4 @@ export const theme = {
     primary: '1.6rem',
     secondary: '3.2rem',
   },
-}
+} as const
