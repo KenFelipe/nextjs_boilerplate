@@ -1,13 +1,9 @@
 import * as Styled from './styled'
 
 export type Props = {
-  label: string
+  children: React.ReactNode
 }
 
-export const Text = ({ label }: Props) => {
-  return (
-    <Styled.Container>
-      <p>{label}</p>
-    </Styled.Container>
-  )
+export const Text = ({ children }: Props) => {
+  return <Styled.Container>{children}</Styled.Container>
 }

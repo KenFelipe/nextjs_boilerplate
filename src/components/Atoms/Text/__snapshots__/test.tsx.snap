@@ -7,12 +7,10 @@ exports[`render label correctly 1`] = `
 }
 
 <div>
-  <div
+  <p
     class="c0"
   >
-    <p>
-      react-testing-library
-    </p>
-  </div>
+    react-testing-library
+  </p>
 </div>
 `;

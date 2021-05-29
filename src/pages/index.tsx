@@ -12,7 +12,7 @@ const HomePage = () => {
 
       <main>
         <h1>Next.js</h1>
-        <Text label="TextComponent" />
+        <Text>TextComponent</Text>
       </main>
     </div>
   )
