@@ -1,10 +1,10 @@
 import * as Styled from './styled'
 
-export type TextProps = {
+export type Props = {
   label: string
 }
 
-export const Text: React.FC<TextProps> = ({ label }: TextProps) => {
+export const Text = ({ label }: Props) => {
   return (
     <Styled.Container>
       <p>{label}</p>
