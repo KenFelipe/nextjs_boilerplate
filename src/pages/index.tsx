@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <div>
       <Head>
-        <title>Next plugin practice</title>
+        <title>Next Plugin Boilerplate</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
