@@ -11,7 +11,8 @@
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "plop": "plop"
+    "plop": "plop",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "10.2.0",
@@ -45,6 +46,7 @@
     "jest-styled-components": "^7.0.4",
     "plop": "^2.7.4",
     "prettier": "^2.2.1",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "husky": "^6.0.0"
   }
 }
