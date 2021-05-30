@@ -73,12 +73,12 @@ module.exports = function (plop) {
           templateFile: `${componentTemplatePath}/test.tsx.hbs`,
           // skip: judgeSkipAction(data.Tests, 'tests.tsx was not created'),
         },
-        // {
-        //   type: 'add',
-        //   path: `${componentPath}/stories.tsx`,
-        //   templateFile: 'template/stories.hbs',
-        //   skip: judgeSkipAction(data.StoryBook, 'stories.tsx was not created'),
-        // },
+        {
+          type: 'add',
+          path: `${componentPath}/${componentName}.stories.tsx`,
+          templateFile: `${componentTemplatePath}/stories.tsx.hbs`,
+          // skip: judgeSkipAction(data.StoryBook, 'stories.tsx was not created'),
+        },
       ]
 
       // const actionsWithNoTypeScript = [
