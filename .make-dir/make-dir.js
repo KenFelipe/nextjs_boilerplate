@@ -7,7 +7,7 @@ const makeDirectories = async () => {
         makeDir(`${COMPONENTS_DIR_PATH}/atoms`),
         makeDir(`${COMPONENTS_DIR_PATH}/molecules`),
         makeDir(`${COMPONENTS_DIR_PATH}/organisms`),
-        makeDir(`${COMPONENTS_DIR_PATH}/template`),
+        makeDir(`${COMPONENTS_DIR_PATH}/templates`),
     ])
 
     console.log(paths)
