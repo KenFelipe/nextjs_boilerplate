@@ -1,3 +1,5 @@
+import { ThemeProvider } from "styled-components";
+import { theme } from '../src/styles/theme'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -7,15 +9,29 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  backgrounds: {
+    values: [
+      { name: 'dark', value: '#000' },
+      { name: 'gray', value: '#ccc' },
+    ],
+  },
   options: {
     storySort: {
       order: [
-        'Example', [
-          'Button',
-          'Header',
-          'Introduction',
-        ],
+        'Atoms',
+        'Organisms',
+        'Molecules',
+        'Templates',
+        'Pages',
       ],
     },
   },
 }
+
+export const decorators = [
+  Story => (
+    <ThemeProvider theme={theme}>
+      <Story />
+    </ThemeProvider>
+  ),
+];
