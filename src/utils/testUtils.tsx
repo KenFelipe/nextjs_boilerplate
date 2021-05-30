@@ -3,11 +3,11 @@ import { ThemeProvider } from 'styled-components'
 
 import { theme } from '../styles/theme'
 
-type props = {
+type Props = {
   children: React.ReactNode
 }
 
-const AllTheProviders: React.FC = ({ children }: props) => {
+const AllTheProviders: React.FC = ({ children }: Props) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
 
