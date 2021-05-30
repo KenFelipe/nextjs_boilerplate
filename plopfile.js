@@ -1,11 +1,13 @@
 module.exports = function (plop) {
-  // function to judge if skip certain action
-  // if return any value action will be skiped
-  const judgeSkipAction = (judgingData, message) => () => {
-    if (!judgingData) {
-      return message
-    }
-  }
+  /*
+    function to judge if skip certain action
+    if return any value action will be skiped
+  */
+  // const judgeSkipAction = (judgingData, message) => () => {
+  //   if (!judgingData) {
+  //     return message
+  //   }
+  // }
 
   plop.setGenerator('component', {
     description: 'Create React Component',
