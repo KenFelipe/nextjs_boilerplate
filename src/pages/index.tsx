@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { Text } from '@/atoms/Text'
+import { Text } from '@/atoms/Text/Text'
 
 const HomePage = () => {
   return (
