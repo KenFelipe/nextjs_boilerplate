@@ -1,4 +1,12 @@
 module.exports = function (plop) {
+  // function to judge if skip certain action
+  // if return any value action will be skiped
+  const judgeSkipAction = (judgingData, message) => () => {
+    if (!judgingData) {
+      return message
+    }
+  }
+
   plop.setGenerator('component', {
     description: 'Create React Component',
 
@@ -36,43 +44,38 @@ module.exports = function (plop) {
 
     /* eslint-disable @typescript-eslint/no-unused-vars */
     actions: function (data) {
+      const componentName = '{{pascalCase ComponentName}}'
+
+      const componentBasePath = './src/components/{{lowerCase Granularity}}'
+      const componentPath = `${componentBasePath}/${componentName}`
+
+      const componentTemplatePath = 'template/component'
+
       const actionsWithTypeScript = [
         function () {
           console.log('\nWith TypeScript')
         },
         {
           type: 'add',
-          path:
-            './src/components/{{lowerCase Granularity}}/{{pascalCase ComponentName}}/index.tsx',
-          templateFile: 'template/component.hbs',
+          path: `${componentPath}/${componentName}.tsx`,
+          templateFile: `${componentTemplatePath}/component.tsx.hbs`,
         },
         {
           type: 'add',
-          path:
-            './src/components/{{lowerCase Granularity}}/{{pascalCase ComponentName}}/styles.ts',
-          templateFile: 'template/styles.hbs',
+          path: `${componentPath}/${componentName}.styled.ts`,
+          templateFile: `${componentTemplatePath}/styled.ts.hbs`,
         },
         // {
         //   type: 'add',
-        //   path:
-        //     './src/components/{{lowerCase Granularity}}/{{pascalCase ComponentName}}/stories.tsx',
+        //   path: `${componentPath}/stories.tsx`,
         //   templateFile: 'template/stories.hbs',
-        //   skip: function () {
-        //     if (!data.StoryBook) {
-        //       return 'no stories'
-        //     }
-        //   },
+        //   skip: judgeSkipAction(data.StoryBook, 'stories.tsx was not created'),
         // },
         // {
         //   type: 'add',
-        //   path:
-        //     './src/components/{{lowerCase Granularity}}/{{pascalCase ComponentName}}/tests.tsx',
+        //   path: `${componentPath}/test.tsx`,
         //   templateFile: 'template/tests.hbs',
-        //   skip: function () {
-        //     if (!data.Tests) {
-        //       return 'no tests'
-        //     }
-        //   },
+        //   skip: judgeSkipAction(data.Tests, 'tests.tsx was not created'),
         // },
       ]
 

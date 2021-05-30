@@ -12,8 +12,8 @@
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "plop": "plop",
     "prepare": "husky install",
+    "plop": "plop",
     "initDirs": "node .make-dir/make-dir.js"
   },
   "dependencies": {
