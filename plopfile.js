@@ -44,19 +44,19 @@ module.exports = function (plop) {
           type: 'add',
           path:
             './src/components/{{lowerCase Granularity}}/{{pascalCase ComponentName}}/index.tsx',
-          templateFile: 'template/component/ts/component.hbs',
+          templateFile: 'template/component.hbs',
         },
         {
           type: 'add',
           path:
             './src/components/{{lowerCase Granularity}}/{{pascalCase ComponentName}}/styles.ts',
-          templateFile: 'template/component/ts/styles.hbs',
+          templateFile: 'template/styles.hbs',
         },
         // {
         //   type: 'add',
         //   path:
         //     './src/components/{{lowerCase Granularity}}/{{pascalCase ComponentName}}/stories.tsx',
-        //   templateFile: 'template/component/ts/stories.hbs',
+        //   templateFile: 'template/stories.hbs',
         //   skip: function () {
         //     if (!data.StoryBook) {
         //       return 'no stories'
@@ -67,7 +67,7 @@ module.exports = function (plop) {
         //   type: 'add',
         //   path:
         //     './src/components/{{lowerCase Granularity}}/{{pascalCase ComponentName}}/tests.tsx',
-        //   templateFile: 'template/component/ts/tests.hbs',
+        //   templateFile: 'template/tests.hbs',
         //   skip: function () {
         //     if (!data.Tests) {
         //       return 'no tests'
