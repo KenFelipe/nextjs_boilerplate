@@ -14,7 +14,7 @@
     "build-storybook": "build-storybook",
     "prepare": "husky install",
     "plop": "plop",
-    "initDirs": "node .make-dir/make-dir.js"
+    "makedir": "node .make-dir/make-dir.js"
   },
   "dependencies": {
     "next": "10.2.0",
