@@ -1,18 +1,22 @@
 import Head from 'next/head'
-
-import { Text } from '@/atoms/Text/Text'
+import Button from '@material-ui/core/Button'
 
 const HomePage = () => {
   return (
     <div>
       <Head>
-        <title>Next Plugin Boilerplate</title>
+        <title>Main Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1>Next.js</h1>
-        <Text>TextComponent</Text>
+        <h2>Next.js</h2>
+        <h3>Next.js</h3>
+        <h6>Next.js</h6>
+        <Button variant="contained" color="primary">
+          Primary
+        </Button>
       </main>
     </div>
   )
